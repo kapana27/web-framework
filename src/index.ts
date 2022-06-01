@@ -4,7 +4,7 @@
 
 import { User } from "./models/User";
 
-const user = new User({ name: 'serg', age: 56 });
+const user = User.buildUser({ name: 'serg', age: 56 });
 
 user.save()
 user.on('save', () => {
