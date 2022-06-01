@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "parcel index.html",
+    "start:dev": "parcel index.html --open",
     "start:server": "json-server -w db.json",
     "start": "concurrently npm:start:*"
   },

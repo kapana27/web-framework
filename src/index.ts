@@ -20,4 +20,4 @@ console.log(user.get("name"));
 user.events.trigger("change");
 user.events.trigger("bdm");
 
-user.save();
+
