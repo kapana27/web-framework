@@ -2,48 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "sersdfgsdgi",
-      "age": 24545
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 2
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 3
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 4
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 5
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 6
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 7
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 8
-    },
-    {
-      "name": "serg",
-      "age": 56,
-      "id": 9
+      "name": "sergi",
+      "age": 25
     }
   ]
 }
