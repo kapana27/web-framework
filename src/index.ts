@@ -1,22 +1,25 @@
+// composition: to implement composition we need delegation
+// with delegation we don't need a caller to reach to Sync/Eventing/Attributes class direclty
+
+
 import { User } from "./models/User";
 
-const user = new User({ id: 1, name: "sergi", age: 24545 });
-user.attributes.set({ name: "sersdfgsdgi" });
+const user = new User({ name: "sergi", age: 24545 });
 
-user.events.on("change", () => {
+user.on("change", () => {
   console.log("change #1");
 });
 
-user.events.on("change", () => {
+user.on("change", () => {
   console.log("change #2");
 });
 
-user.events.on("bdm", () => {
+user.on("bdm", () => {
   console.log("bdm");
 });
 
-console.log(user.attributes.get("name"));
+console.log(user.get("name"));
 
-user.events.trigger("change");
-user.events.trigger("bdm");
+user.trigger("change");
+user.trigger("bdm");
 

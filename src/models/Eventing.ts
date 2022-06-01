@@ -1,4 +1,4 @@
-type Callback = () => void;
+export type Callback = () => void;
 
 export class Eventing {
   events: { [key: string]: Callback[] };
@@ -6,12 +6,12 @@ export class Eventing {
     this.events = {};
   }
 
-  on(eventName: string, cb: Callback) {
+  on = (eventName: string, cb: Callback)=> {
     const handlers = this.events[eventName] || [];
     this.events[eventName] = [...handlers, cb];
   }
 
-  trigger(eventName: string): void {
+  trigger = (eventName: string): void => {
     const handlers = this.events[eventName];
 
     if (!handlers || handlers.length === 0) {
