@@ -1,3 +1,4 @@
+import { AxiosResponse } from "axios";
 import { Attributes } from "./Attributes";
 import { Eventing } from "./Eventing";
 import { Sync } from "./Sync";
@@ -29,5 +30,27 @@ export class User<T> {
 
   get get() {
     return this.attributes.get;
+  }
+
+  set(update: UserProps): void {
+    this.attributes.set(update);
+    this.events.trigger("change");
+  }
+
+  fetch() {
+    const id = this.attributes.get("id");
+    if (typeof id !== "number") {
+      return;
+    }
+
+    this.sync.fetch(id).then((response: AxiosResponse) => {
+      this.set(response.data as UserProps);
+    });
+  }
+
+  save(): void {
+    this.sync.save(this.attributes.getAll()).then((response: AxiosResponse) => {
+    this.trigger("save");
+    });;
   }
 }
