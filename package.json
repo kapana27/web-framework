@@ -6,7 +6,8 @@
   "scripts": {
     "start:dev": "parcel index.html --open",
     "start:server": "json-server -w db.json",
-    "start": "concurrently npm:start:*"
+    "start": "concurrently npm:start:*",
+    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
