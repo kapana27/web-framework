@@ -3,7 +3,7 @@ import { Attributes } from "./Attributes";
 import { Eventing } from "./Eventing";
 import { Model } from "./Model";
 
-interface UserProps {
+export interface UserProps {
   name?: string;
   age?: number;
   id?: number;
