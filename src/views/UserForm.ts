@@ -14,10 +14,15 @@ export class UserForm extends View<User, UserProps> {
     }
   };
 
+  onSaveClick = () => {
+    this.model.save();
+  }
+
   eventsMap(): { [key: string]: () => void } {
     return {
       "click:#set-age": this.onSetAgeClick,
       "click:#set-name": this.onSetNameClick,
+      "click:#save": this.onSaveClick
     };
   }
 
@@ -31,7 +36,7 @@ export class UserForm extends View<User, UserProps> {
             <input id="name-input" placeHolder="${name}" /> <button id="set-name">Change Name</button> <br />
             <hr />
             <button id="set-age">Set Random Age</button><br />
-            <button id="save">Save</button>
+            <button id="save">Save User</button>
         </div>`;
   }
 }
