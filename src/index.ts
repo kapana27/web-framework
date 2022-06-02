@@ -3,6 +3,11 @@ import { UserForm } from "./views/UserForm";
 
 const user = User.buildUser({ name: "sergi", age: 25 });
 
-const userForm = new UserForm(document.getElementById("app"), user);
+const app = document.querySelector("#app");
 
-userForm.render();
+if (app) {
+  const userForm = new UserForm(app, user);
+  userForm.render();
+} else {
+  throw new Error("Root element not found");
+}
