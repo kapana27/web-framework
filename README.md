@@ -1,3 +1,3 @@
-# TSC Web Framework
+# Web Framework
 
 Building web framework with TypeScript.
